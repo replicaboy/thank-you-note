@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | everyone</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Confetti canvas (decorative) -->
+  <canvas
+    id="confetti-canvas"
+    aria-hidden="true"
+  ></canvas>
+
+  <header class="site-header">
+    <div class="logo" aria-label="Thank you logo">
+      <span class="logo-emoji">🎉</span>
+      <span class="logo-text">Shukriya</span>
+    </div>
+
+    <nav class="site-nav" aria-label="Main">
+      <button id="share-btn" class="btn btn-ghost" type="button">
+        Share
+      </button>
+      <span id="share-tooltip" class="tooltip" role="status" aria-live="polite">
+        <!-- Filled from JS -->
+      </span>
+
+      <button
+        id="audio-toggle"
+        class="btn btn-ghost"
+        type="button"
+        aria-pressed="false"
+        aria-label="Toggle background music"
+      >
+        🔈
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="hero-tagline">Special message from <strong>Hariom!</strong></p>
+        <h1 id="hero-title" class="hero-title">
+          Thank you!
+        </h1>
+        <p class="hero-subtitle">
+          Aap sabka pyar mila — dil se shukriya!
+        </p>
+
+        <div class="hero-actions">
+          <button
+            id="thanks-btn"
+            class="btn btn-primary"
+            type="button"
+          >
+            Send more confetti
+          </button>
+          <p class="hero-hint">
+            Tip: Press <kbd>T</kbd> on keyboard for a surprise!
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+      ><!-- Wishers section -->
+<section
+  class="wishers-section"
+  aria-labelledby="wishers-heading"
+>
+  <header class="section-header">
+    <h2 id="wishers-heading">Special shout-out ✨</h2>
+    <p class="section-subtitle">
+      Un sab doston ke naam jinhone wishes bheje.
+    </p>
+  </header>
+
+  <div
+    class="wishers-grid"
+    role="list"
+    aria-label="List of people who sent wishes"
+  >
+    <!-- Wisher 1 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Aditya bhaiji, Dhanyawaad! 🙌"
+    >
+      <h3 class="wisher-name">Aditya Jha</h3>
+      <p class="wisher-tag">@aditya-bhaiji</p>
+    </article>
+
+    <!-- Wisher 2 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Yuvraj Bhaiji, Thankyou 🏏💫"
+    >
+      <h3 class="wisher-name">Yuvraj Singh</h3>
+      <p class="wisher-tag">@yuvraj bhaiji</p>
+    </article>
+
+    <!-- Wisher 3 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Sudhanshu, thank you yaar! 🤗"
+    >
+      <h3 class="wisher-name">Sudhanshu</h3>
+      <p class="wisher-tag">@sudhanshu dost</p>
+    </article>
+
+    <!-- Wisher 4 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Vaibhav, tumhaari wish ne mera din special bana diya! 😊🎉"
+    >
+      <h3 class="wisher-name">Vaibhav Yadav</h3>
+      <p class="wisher-tag">@vaibhav</p>
+    </article>
+
+    <!-- Wisher 5 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Adarsh bhai, — dil se shukriya! 💖"
+    >
+      <h3 class="wisher-name">Adarsh Yadav</h3>
+      <p class="wisher-tag">@adarsh</p>
+    </article>
+
+    <!-- Wisher 6 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Ayush, Thanks Buddy! 🥰"
+    >
+      <h3 class="wisher-name">Ayush Bharti</h3>
+      <p class="wisher-tag">@ayush mittar</p>
+    </article>
+
+    <!-- Wisher 7 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thanks Bhai! 🩷✨"
+    >
+      <h3 class="wisher-name">Vinay Pathak (Santosh)</h3>
+      <p class="wisher-tag">@vinay</p>
+    </article>
+
+    <!-- Wisher 8 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Chandan, special thanks bro! 🙏💙"
+    >
+      <h3 class="wisher-name">Chandan Kumar</h3>
+      <p class="wisher-tag">@chandan Kumar</p>
+    </article>
+
+    <!-- Wisher 9 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Priyanshu, tumhaari wish ekdum heartfelt thi — shukriya dost! 💚"
+    >
+      <h3 class="wisher-name">Priyanshu Kumar</h3>
+      <p class="wisher-tag">@priyanshu</p>
+    </article>
+
+    <!-- Wisher 10 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Risabh, tumhaara wish padh kar bohot khushi hui yaar! 🌟😊"
+    >
+      <h3 class="wisher-name">Risabh Jha</h3>
+      <p class="wisher-tag">@risabh</p>
+    </article>
+
+    <!-- Wisher 11 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Krish bhai, Thanks Bro! 🎊(krish ka gana sunega... Krish ka.)"
+    >
+      <h3 class="wisher-name">Krish</h3>
+      <p class="wisher-tag">@krish</p>
+    </article>
+
+    <!-- Wisher 12 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Vishal Pathak, thanks bro! 🤩"
+    >
+      <h3 class="wisher-name">Vishal Pathak</h3>
+      <p class="wisher-tag">@vishal</p>
+    </article>
+
+    <!-- Wisher 13 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Kundan bhai, thankyou for your wishes — dil se shukriya bhai! 🌈"
+    >
+      <h3 class="wisher-name">Kundan Thakur</h3>
+      <p class="wisher-tag">@kundan Raj</p>
+    </article>
+
+    <!-- Wisher 14 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Akash (Dayanand), Kyun re...........! thanks🩷 💫🙌"
+    >
+      <h3 class="wisher-name">Akash Yadav (Dayanand)</h3>
+      <p class="wisher-tag">@akash-ladle</p>
+    </article>
+
+    <!-- Wisher 15 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Ravi bhaiya, Thankyou for your wishes! 🎉😄"
+    >
+      <h3 class="wisher-name">Ravi Raj</h3>
+      <p class="wisher-tag">@ravi bhaiya</p>
+    </article>
+
+    <!-- Wisher 16 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Pushpanjali, Thanks sis! 🌸💖"
+    >
+      <h3 class="wisher-name">Pushpanjali Pradhan</h3>
+      <p class="wisher-tag">@pushpanjali</p>
+    </article>
+
+    <!-- Wisher 17 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Ujjwal bhai, fine Arts ke practical ke liye Majnu Bhai wali painting bana dete yaar — thank you! 😊✨"
+    >
+      <h3 class="wisher-name">Ujjwal Jha</h3>
+      <p class="wisher-tag">@ujjwal(painter-bhaiya)</p>
+    </article>
+
+    <!-- Wisher 18 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Anjali, thanks for your wishes — shukriya! 💕🌟"
+    >
+      <h3 class="wisher-name">Anjali Jha</h3>
+      <p class="wisher-tag">@anjali</p>
+    </article>
+
+    <!-- Wisher 19 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Anand, thanks yaar! 🙏💙"
+    >
+      <h3 class="wisher-name">Kumar Anand</h3>
+      <p class="wisher-tag">@Anand</p>
+    </article>
+
+    <!-- Wisher 20 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Keshav Bhaiya, tumhaare wishes ke liye dil se shukriya! 🤗✨"
+    >
+      <h3 class="wisher-name">Keshav Thakur</h3>
+      <p class="wisher-tag">@keshav</p>
+    </article>
+
+    <!-- Wisher 21 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Gaurav bhai, tumhaari wish ne din ko aur bhi bright bana diya! 🌟😊"
+    >
+      <h3 class="wisher-name">Gaurav Thakur</h3>
+      <p class="wisher-tag">@gaurav</p>
+    </article>
+
+    <!-- Wisher 22 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Rohini, tumhaara message bohot sweet tha — thank you so much! 💖🌸"
+    >
+      <h3 class="wisher-name">Rohini</h3>
+      <p class="wisher-tag">@rohini</p>
+    </article>
+
+    <!-- Wisher 23 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Raj Mani bhai, shukriya! 🎊💫"
+    >
+      <h3 class="wisher-name">Raj Mani Raj</h3>
+      <p class="wisher-tag">@rajmani</p>
+    </article>
+
+    <!-- Wisher 24 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Nikhil, tumhaari wish ne dil khush kar diya — bohot thanks yaar! 🙌💚"
+    >
+      <h3 class="wisher-name">Nikhil Bhardwaj</h3>
+      <p class="wisher-tag">@nikhil</p>
+    </article>
+
+    <!-- Wisher 25 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Saurav bhai, tumhaara message pure dil se tha — thank you! 🌈😄"
+    >
+      <h3 class="wisher-name">Saurav Thakur</h3>
+      <p class="wisher-tag">@saurav</p>
+    </article>
+
+    <!-- Wisher 26 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Ayush Bhaiya, — thank you! 🌈😄"
+    >
+      <h3 class="wisher-name">Ayush Bhaiya</h3>
+      <p class="wisher-tag">@Ayush</p>
+    </article>
+
+    <!-- Wisher 27 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Adarsh bhai, thank you! 🌈😄"
+    >
+      <h3 class="wisher-name">Adarsh</h3>
+      <p class="wisher-tag">@adarsh</p>
+    </article>
+
+    <!-- Wisher 28 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thank You Bhaiya 🩷 🌈😄"
+    >
+      <h3 class="wisher-name">Om Prakash</h3>
+      <p class="wisher-tag">@om-prakash bhaiya</p>
+    </article>
+
+    <!-- Wisher 29 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thank You Bhaiya 🩷 🌈😄"
+    >
+      <h3 class="wisher-name">Ayush</h3>
+      <p class="wisher-tag">@Ayush bhaiya</p>
+    </article>
+
+    <!-- Wisher 29 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thank You Bhai 🩷 🌈😄"
+    >
+      <h3 class="wisher-name">Navneet</h3>
+      <p class="wisher-tag">@Navneet</p>
+    </article>
+
+    <!-- Wisher 30 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thank You Bhai 🩷 🌈😄"
+    >
+      <h3 class="wisher-name">Niranjan</h3>
+      <p class="wisher-tag">@Niranjan</p>
+    </article>
+
+    <!-- Wisher 31 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thank You Bhai 🩷 🌈😄"
+    >
+      <h3 class="wisher-name">Shivam Das</h3>
+      <p class="wisher-tag">@Shvam Das</p>
+    </article>
+
+    <!-- Wisher 32 -->
+    <article
+      class="wisher-card"
+      role="listitem"
+      tabindex="0"
+      data-reply="Thank You Bhai 🩷 🌈😄"
+    >
+      <h3 class="wisher-name">Rishav</h3>
+      <p class="wisher-tag">@Rishav</p>
+    </article>
+
+
+
+
+
+  </div>
+
+  <!-- Hover / focus toast -->
+  <div
+    id="wisher-toast"
+    class="wisher-toast"
+    role="status"
+    aria-live="polite"
+  >
+    <!-- Filled from JS -->
+  </div>
+</section>
+
+
+    <!-- Reply form section -->
+    <section
+      class="reply-section"
+      aria-labelledby="reply-heading"
+    >
+      <header class="section-header">
+        <h2 id="reply-heading">Leave a little note 💬</h2>
+        <p class="section-subtitle">
+          Apna naam aur chhota sa message chhod sakte hain.
+        </p>
+      </header>
+
+      <form id="reply-form" class="reply-form">
+        <div class="field-group">
+          <label for="reply-name">Name</label>
+          <input
+            id="reply-name"
+            name="name"
+            type="text"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="reply-message">Message</label>
+          <textarea
+            id="reply-message"
+            name="message"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="reply-actions">
+          <button class="btn btn-primary" type="submit">
+            Save reply
+          </button>
+          <button
+            id="show-replies-btn"
+            class="btn btn-secondary"
+            type="button"
+          >
+            Show replies
+          </button>
+        </div>
+
+        <p class="reply-note">
+          Note: All replies are storing on MongoDB cloud storage.
+        </p>
+      </form>
+
+      <div
+        id="replies-list"
+        class="replies-list"
+        aria-live="polite"
+        aria-label="Saved replies"
+      >
+        <!-- JS will render replies here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Made with 💖 by Hariom
+    </p>
+  </footer>
+
+  <!-- Optional background audio -->
+  <audio
+    id="bg-audio"
+    src="assets/bg-music.mp3"
+    loop
+  ></audio>
+
+  <!-- Main script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
