@@ -730,3 +730,23 @@ textarea {
     --color-text-muted: #adb5bd;
   }
 }
+/* Apology note styling */
+.apology-note {
+  max-width: 1200px;
+  margin: 1.5rem auto 0.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(173, 216, 230, 0.2));
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+  font-weight: 500;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.apology-note strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
